@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 
 type TechStackItem = {
     name: string,
-    icon: React.JSX.IntrinsicElements['svg'],
+    icon: React.ReactNode,
 }
 
 const TechStackList: TechStackItem[] = [
@@ -190,7 +190,6 @@ export default function Techstack() {
         <div className="flex justify-center items-center">
             <Marquee pauseOnHover direction="right">
                 {
-                    // @ts-ignore
                     TechStackList.map((techstack, index) => <TechStackCard key={index} name={techstack.name} icon={techstack.icon} />)
                 }
             </Marquee>

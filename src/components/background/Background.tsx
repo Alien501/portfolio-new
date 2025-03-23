@@ -1,12 +1,30 @@
-// @ts-nocheck
 'use client';
 import { useEffect, useRef } from 'react';
 
+type Particle = {
+    x: number;
+    y: number;
+    size: number;
+    opacity: number;
+    originalOpacity: number;
+    speed: number;
+    drift: number;
+    life: number;
+    maxLife: number;
+    fadeThreshold: number;
+    fadingOut: boolean;
+    reset: () => void;
+    update: () => void;
+    draw: () => void;
+}
+
 export default function Background() {
-    const canvasRef = useRef(null);
-    const particlesRef = useRef([]);
+    const canvasRef = useRef<HTMLCanvasElement | null>(null);
+    const particlesRef = useRef<Particle[]>([]);
     
     useEffect(() => {
+        if(!canvasRef.current)
+            return;
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
         
@@ -19,7 +37,30 @@ export default function Background() {
         window.addEventListener('resize', setCanvasSize);
         
         class Particle {
+            x: number;
+            y: number;
+            size: number;
+            opacity: number;
+            originalOpacity: number;
+            speed: number;
+            drift: number;
+            life: number;
+            maxLife: number;
+            fadeThreshold: number;
+            fadingOut: boolean;
+
             constructor() {
+                this.x = 0;
+                this.y = 0;
+                this.size = 0;
+                this.opacity = 0;
+                this.originalOpacity = 0;
+                this.speed = 0;
+                this.drift = 0;
+                this.life = 0;
+                this.maxLife = 0;
+                this.fadeThreshold = 0;
+                this.fadingOut = false;
                 this.reset();
             }
             
@@ -59,6 +100,7 @@ export default function Background() {
             }
             
             draw() {
+                if(!ctx) return;
                 ctx.beginPath();
                 ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
                 ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity})`;
@@ -70,6 +112,7 @@ export default function Background() {
         particlesRef.current = Array.from({ length: particleCount }, () => new Particle());
         
         const animate = () => {
+            if(!ctx) return;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             
             particlesRef.current.forEach(particle => {
