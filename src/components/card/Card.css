@@ -1,0 +1,44 @@
+.card-animated {
+    --line-width: 1px;
+    --line-color: #adbbff;
+    --start-angle: 0deg;
+    --delay: 0s;
+    --easing: linear;
+    position: relative;
+    perspective: 1000px;
+}
+
+.corner-dots {
+    --dot-color: #d1e4fa;
+    --dot-size: 4px;
+    content: "";
+    position: absolute;
+    inset: 16px;
+    pointer-events: none;
+    filter: drop-shadow(0 0 8px rgba(209, 228, 250, 1));
+    background-image:
+        radial-gradient(var(--dot-color) 50%, transparent 50%),
+        radial-gradient(var(--dot-color) 50%, transparent 50%),
+        radial-gradient(var(--dot-color) 50%, transparent 50%),
+        radial-gradient(var(--dot-color) 50%, transparent 50%);
+    background-size:
+        var(--dot-size) var(--dot-size),
+        var(--dot-size) var(--dot-size),
+        var(--dot-size) var(--dot-size),
+        var(--dot-size) var(--dot-size);
+    background-position:
+        0 0,
+        100% 0,
+        0 100%,
+        100% 100%;
+    background-repeat: no-repeat;
+}
+
+.card-animated::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 1px solid rgba(186, 207, 247, 0.12);
+    pointer-events: none;
+}

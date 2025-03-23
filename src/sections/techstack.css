@@ -1,0 +1,90 @@
+.tech-card-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    min-width: 48px;
+    min-height: 48px;
+    z-index: 10;
+    transition: all .3s ease-in-out;
+}
+
+.tech-card-wrapper .highlight {
+    content: '';
+    position: absolute;
+    height: 4px;
+    border-radius: 100%;
+    width: 90%;
+    background-color: var(--primary-light);
+    left: 50%;
+    opacity: .1;
+    filter: blur(2px);
+    z-index: 10;
+    box-shadow: 0px 0px 10px var(--primary-light);
+    transition: all .3s ease-in-out;
+}
+
+.tech-card-wrapper .highlight-top {
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.tech-card-wrapper .highlight-bottom {
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.tech-card-wrapper:hover .highlight {
+    opacity: 1;
+}
+
+.tech-card-wrapper:hover {
+    cursor: pointer;
+}
+
+.techicon {
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.techicon svg {
+    display: block;
+    height: 32px;
+    width: 32px;
+    color: var(--primary-light);
+    stroke: var(--primary-dark);
+    transition: .3s ease;
+}
+
+.techstack-name {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 45%);
+    opacity: 0;
+    height: 20px;
+    max-width: max-content;
+    min-width: 100%;
+    padding: 4px;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    text-align: center;
+    transition: all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.tech-card-wrapper:hover .techicon svg {
+    scale: .8;
+}
+
+.tech-card-wrapper:hover .techstack-name{
+    opacity: 1;
+    color: var(--primary-light);
+}

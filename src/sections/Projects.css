@@ -1,0 +1,97 @@
+/* Project Card Styles */
+.project-card-wrapper {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    z-index: 10;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease-in-out;
+}
+
+.project-card-wrapper .highlight {
+    content: '';
+    position: absolute;
+    height: 3px;
+    border-radius: 100%;
+    width: 80%;
+    background-color: var(--primary-light);
+    left: 50%;
+    opacity: 0.1;
+    filter: blur(2px);
+    z-index: 10;
+    box-shadow: 0px 0px 10px var(--primary-light);
+    transition: all 0.3s ease-in-out;
+}
+
+.project-card-wrapper .highlight-top {
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.project-card-wrapper .highlight-bottom {
+    bottom: 0;
+    transform: translateX(-50%);
+}
+
+.project-card-wrapper:hover .highlight {
+    opacity: 0.8;
+    width: 85%;
+}
+
+.project-card-wrapper:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+}
+
+.tech-stack-container {
+    overflow: hidden;
+}
+
+.description-content {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Custom scrollbar for description text */
+.description-content p::-webkit-scrollbar {
+    width: 3px;
+}
+
+.description-content p::-webkit-scrollbar-track {
+    background: rgba(99, 133, 255, 0.05);
+    border-radius: 20px;
+}
+
+.description-content p::-webkit-scrollbar-thumb {
+    background-color: rgba(99, 133, 255, 0.2);
+    border-radius: 20px;
+}
+
+/* For Firefox */
+.description-content p {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(99, 133, 255, 0.2) rgba(99, 133, 255, 0.05);
+}
+
+/* Fix for horizontal scrollbar in Projects container */
+.projects-container::-webkit-scrollbar {
+    height: 4px;
+}
+
+.projects-container::-webkit-scrollbar-track {
+    background: rgba(99, 133, 255, 0.05);
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+    background-color: rgba(99, 133, 255, 0.2);
+    border-radius: 20px;
+}
