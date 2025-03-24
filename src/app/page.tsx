@@ -12,7 +12,7 @@ import ProjectsSection from '@/sections/Projects';
 
 export default function Home() {
   return (
-    <div className="container h-screen overflow-hidden relative z-10">
+    <div className="container h-screen overflow-hidden relative z-10 select-none">
       <Background />
       <div className="hero-section">
         <HeroSection />
@@ -58,7 +58,7 @@ export default function Home() {
       <div className="about-section">
         <Card
           title='About'
-          child={<p className='text-justify h-full'>Hello! I&apos;m Vignesh, a passionate software developer skilled in full-stack technologies including React.js, Next.js, and Django. Currently pursuing my Bachelor&apos;s in Computer Science and Engineering, I&apos;m dedicated to creating innovative and efficient solutions through code. I thrive on tackling complex problems and turning ideas into reality. Beyond my studies, I actively participate in hackathons and open-source projects to stay at the forefront of technology. My experience includes developing high-traffic web applications and cloud migration projects. Let&apos;s connect and collaborate to shape the future of tech together!</p>}
+          child={<div className='h-[240px] overflow-y-scroll overflow-x-hidden thin-scrollbar'><p className='text-justify h-full'>Hello! I&apos;m Vignesh, a passionate software developer skilled in full-stack technologies including React.js, Next.js, and Django. Currently pursuing my Bachelor&apos;s in Computer Science and Engineering, I&apos;m dedicated to creating innovative and efficient solutions through code. I thrive on tackling complex problems and turning ideas into reality. Beyond my studies, I actively participate in hackathons and open-source projects to stay at the forefront of technology. My experience includes developing high-traffic web applications and cloud migration projects. Let&apos;s connect and collaborate to shape the future of tech together!</p></div>}
         />
       </div>
       <div className="education-section">

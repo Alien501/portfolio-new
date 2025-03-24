@@ -63,7 +63,7 @@ export default function Contact() {
     };
 
     return (
-        <div className="h-[400px] p-6 rounded-lg shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
+        <div className="md:h-[200px] lg:h-[400px] p-6 rounded-lg shadow-[0_4px_24px_rgba(0,0,0,0.08)]">
             <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="flex flex-col gap-1">
                     <label className="text-sm text-primary-dark/80 font-untitle-sans-medium" htmlFor="name">

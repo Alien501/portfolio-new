@@ -1,6 +1,10 @@
 'use client';
 import { useEffect, useRef } from 'react';
 
+import './Background.css';
+// import gsap from 'gsap';
+
+
 type Particle = {
     x: number;
     y: number;
@@ -129,11 +133,84 @@ export default function Background() {
             window.removeEventListener('resize', setCanvasSize);
         };
     }, []);
+
+    // useEffect(() => {
+    //     const spotLights = document.querySelectorAll('.spotlight');
+    //     const spotlightLeft = document.querySelector('.spotlight-left');
+    //     const spotlightRight = document.querySelector('.spotlight-right');
+    //     const spotlightMid = document.querySelector('.spotlight-mid');
     
+    //     const getRandomInRange = (min: number, max: number) => {
+    //         return Math.random() * (max - min) + min;
+    //     };
+    
+    //     // Initial setup - hide spotlights
+    //     const initialTimeline = gsap.timeline({
+    //         delay: 0.4
+    //     });
+    
+    //     gsap.set(spotLights, {
+    //         scale: 0,
+    //     });
+    
+    //     // Initial reveal animation
+    //     initialTimeline
+    //         .to(spotlightMid, {
+    //             scale: 1,
+    //             duration: 0.8
+    //         })
+    //         .to([spotlightLeft, spotlightRight], {
+    //             scale: 1,
+    //             duration: 0.8
+    //         });
+    
+    //     const animateSpotlight = (
+    //         element: Element, 
+    //         rotationRange: [number, number], 
+    //         baseDelay: number = 0
+    //     ) => {
+    //         // Generate random values for this animation cycle
+    //         const targetRotation = getRandomInRange(rotationRange[0], rotationRange[1]);
+    //         const targetOpacity = getRandomInRange(0.5, 1);
+    //         const moveDuration = getRandomInRange(2, 4); // Longer duration for smoother movement
+            
+    //         // Animate to the new random position with smooth transition
+    //         gsap.to(element, {
+    //             rotate: targetRotation,
+    //             opacity: targetOpacity,
+    //             duration: moveDuration,
+    //             delay: baseDelay,
+    //             ease: "sine.inOut", // Much smoother easing
+    //             onComplete: () => {
+    //                 // Create a slight pause between movements (0-1 second)
+    //                 const pauseDuration = getRandomInRange(0, 1);
+    //                 animateSpotlight(element, rotationRange, pauseDuration);
+    //             }
+    //         });
+    //     };
+    
+    //     // Start animations after initial reveal
+    //     initialTimeline.call(() => {
+    //         // Stagger the start times slightly to avoid synchronized movement
+    //         if (spotlightLeft) {
+    //             animateSpotlight(spotlightLeft, [12, 24], 0.2);
+    //         }
+            
+    //         if (spotlightMid) {
+    //             animateSpotlight(spotlightMid, [-6, 6], 0);
+    //         }
+            
+    //         if (spotlightRight) {
+    //             animateSpotlight(spotlightRight, [-18, -12], 0.5);
+    //         }
+    //     });
+    // }, []);
+
     return (
         <div className="background fixed -z-10 h-screen left-0 top-0 right-0 bottom-0">
-            {/* <div className='absolute h-screen w-[32px] bg-primary-light/40 blur-2xl left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[18deg] origin-top'></div>
-            <div className='absolute h-screen w-[32px] bg-primary-light/40 blur-2xl left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-[18deg] origin-top'></div> */}
+            {/* <div className='spotlight spotlight-left absolute md:h-[400px] sm:h-[200px] top-0 lg:h-[700px] w-[200px] blur-2xl left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[18deg] origin-top'></div>
+            <div className='spotlight spotlight-mid absolute md:h-[400px] sm:h-[200px] top-0 lg:h-[700px] w-[200px] blur-2xl left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[0deg] origin-top'></div>
+            <div className='spotlight spotlight-right absolute md:h-[400px] sm:h-[200px] top-0 lg:h-[700px] w-[200px] blur-2xl left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-[18deg] origin-top'></div> */}
             <canvas ref={canvasRef}></canvas>
         </div>
     );

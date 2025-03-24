@@ -27,63 +27,63 @@ const socialLinks: SocialItem[] = [
     },
     {
         icon: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 49.4 512 399.42">
-        <g fill="none" fill-rule="evenodd">
-          <g fill-rule="nonzero">
+        <g fill="none" fillRule="evenodd">
+          <g fillRule="nonzero">
             <path fill="currentColor" d="M34.91 448.818h81.454V251L0 163.727V413.91c0 19.287 15.622 34.91 34.91 34.91z"/>
             <path fill="currentColor" d="M395.636 448.818h81.455c19.287 0 34.909-15.622 34.909-34.909V163.727L395.636 251z"/>
             <path fill="currentColor" d="M395.636 99.727V251L512 163.727v-46.545c0-43.142-49.25-67.782-83.782-41.891z"/>
           </g>
           <path fill="currentColor" d="M116.364 251V99.727L256 204.455 395.636 99.727V251L256 355.727z"/>
-          <path fill="currentColor" fill-rule="nonzero" d="M0 117.182v46.545L116.364 251V99.727L83.782 75.291C49.25 49.4 0 74.04 0 117.18z"/>
+          <path fill="currentColor" fillRule="nonzero" d="M0 117.182v46.545L116.364 251V99.727L83.782 75.291C49.25 49.4 0 74.04 0 117.18z"/>
         </g>
       </svg>
       ,
         link: 'mailto:cvignesh404@gmail.com'
     },
     {
-        icon: <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" width="256" height="256" preserveAspectRatio="xMidYMid"><defs><linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stop-color="transparent"/><stop offset="100%" stop-color="transparent"/></linearGradient></defs><path fill="transparent" d="M128 0C94.06 0 61.48 13.494 37.5 37.49A128.038 128.038 0 0 0 0 128c0 33.934 13.5 66.514 37.5 90.51C61.48 242.506 94.06 256 128 256s66.52-13.494 90.5-37.49c24-23.996 37.5-56.576 37.5-90.51 0-33.934-13.5-66.514-37.5-90.51C194.52 13.494 161.94 0 128 0Z"/><path fill="currentColor" d="M57.94 126.648c37.32-16.256 62.2-26.974 74.64-32.152 35.56-14.786 42.94-17.354 47.76-17.441 1.06-.017 3.42.245 4.96 1.49 1.28 1.05 1.64 2.47 1.82 3.467.16.996.38 3.266.2 5.038-1.92 20.24-10.26 69.356-14.5 92.026-1.78 9.592-5.32 12.808-8.74 13.122-7.44.684-13.08-4.912-20.28-9.63-11.26-7.386-17.62-11.982-28.56-19.188-12.64-8.328-4.44-12.906 2.76-20.386 1.88-1.958 34.64-31.748 35.26-34.45.08-.338.16-1.598-.6-2.262-.74-.666-1.84-.438-2.64-.258-1.14.256-19.12 12.152-54 35.686-5.1 3.508-9.72 5.218-13.88 5.128-4.56-.098-13.36-2.584-19.9-4.708-8-2.606-14.38-3.984-13.82-8.41.28-2.304 3.46-4.662 9.52-7.072Z"/></svg>,
+        icon: <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" width="256" height="256" preserveAspectRatio="xMidYMid"><defs><linearGradient id="a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stopColor="transparent"/><stop offset="100%" stopColor="transparent"/></linearGradient></defs><path fill="transparent" d="M128 0C94.06 0 61.48 13.494 37.5 37.49A128.038 128.038 0 0 0 0 128c0 33.934 13.5 66.514 37.5 90.51C61.48 242.506 94.06 256 128 256s66.52-13.494 90.5-37.49c24-23.996 37.5-56.576 37.5-90.51 0-33.934-13.5-66.514-37.5-90.51C194.52 13.494 161.94 0 128 0Z"/><path fill="currentColor" d="M57.94 126.648c37.32-16.256 62.2-26.974 74.64-32.152 35.56-14.786 42.94-17.354 47.76-17.441 1.06-.017 3.42.245 4.96 1.49 1.28 1.05 1.64 2.47 1.82 3.467.16.996.38 3.266.2 5.038-1.92 20.24-10.26 69.356-14.5 92.026-1.78 9.592-5.32 12.808-8.74 13.122-7.44.684-13.08-4.912-20.28-9.63-11.26-7.386-17.62-11.982-28.56-19.188-12.64-8.328-4.44-12.906 2.76-20.386 1.88-1.958 34.64-31.748 35.26-34.45.08-.338.16-1.598-.6-2.262-.74-.666-1.84-.438-2.64-.258-1.14.256-19.12 12.152-54 35.686-5.1 3.508-9.72 5.218-13.88 5.128-4.56-.098-13.36-2.584-19.9-4.708-8-2.606-14.38-3.984-13.82-8.41.28-2.304 3.46-4.662 9.52-7.072Z"/></svg>,
         link: 'https://t.me/Alien_501'
     },
     // {
     //     icon: <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" className="_1O4jTk-dZ-VIxsCuYB6OR8" viewBox="0 0 216 216">
     //     <defs>
     //         <radialGradient id="snoo-radial-gragient" cx="169.75" cy="92.19" r="50.98" fx="169.75" fy="92.19" gradientTransform="matrix(1 0 0 .87 0 11.64)" gradientUnits="userSpaceOnUse">
-    //             <stop offset="0" stop-color="black"/>
-    //             <stop offset=".4" stop-color="black"/>
-    //             <stop offset=".51" stop-color="black"/>
-    //             <stop offset=".62" stop-color="black"/>
-    //             <stop offset=".7" stop-color="black"/>
-    //             <stop offset=".72" stop-color="black"/>
-    //             <stop offset=".76" stop-color="black"/>
-    //             <stop offset=".8" stop-color="black"/>
-    //             <stop offset=".83" stop-color="black"/>
-    //             <stop offset=".85" stop-color="black"/>
-    //             <stop offset=".88" stop-color="black"/>
-    //             <stop offset=".9" stop-color="black"/>
+    //             <stop offset="0" stopColor="black"/>
+    //             <stop offset=".4" stopColor="black"/>
+    //             <stop offset=".51" stopColor="black"/>
+    //             <stop offset=".62" stopColor="black"/>
+    //             <stop offset=".7" stopColor="black"/>
+    //             <stop offset=".72" stopColor="black"/>
+    //             <stop offset=".76" stopColor="black"/>
+    //             <stop offset=".8" stopColor="black"/>
+    //             <stop offset=".83" stopColor="black"/>
+    //             <stop offset=".85" stopColor="black"/>
+    //             <stop offset=".88" stopColor="black"/>
+    //             <stop offset=".9" stopColor="black"/>
     //         </radialGradient>
     //         <radialGradient xlinkHref="#snoo-radial-gragient" id="snoo-radial-gragient-2" cx="47.31" r="50.98" fx="47.31"/>
     //         <radialGradient xlinkHref="#snoo-radial-gragient" id="snoo-radial-gragient-3" cx="109.61" cy="85.59" r="153.78" fx="109.61" fy="85.59" gradientTransform="matrix(1 0 0 .7 0 25.56)"/>
     //         <radialGradient id="snoo-radial-gragient-4" cx="-6.01" cy="64.68" r="12.85" fx="-6.01" fy="64.68" gradientTransform="matrix(1.07 0 0 1.55 81.08 27.26)" gradientUnits="userSpaceOnUse">
-    //             <stop offset="0" stop-color="black"/>
-    //             <stop offset=".5" stop-color="black"/>
-    //             <stop offset=".7" stop-color="black"/>
-    //             <stop offset=".82" stop-color="black"/>
-    //             <stop offset=".92" stop-color="black"/>
-    //             <stop offset="1" stop-color="black"/>
+    //             <stop offset="0" stopColor="black"/>
+    //             <stop offset=".5" stopColor="black"/>
+    //             <stop offset=".7" stopColor="black"/>
+    //             <stop offset=".82" stopColor="black"/>
+    //             <stop offset=".92" stopColor="black"/>
+    //             <stop offset="1" stopColor="black"/>
     //         </radialGradient>
     //         <radialGradient xlinkHref="#snoo-radial-gragient-4" id="snoo-radial-gragient-5" cx="-73.55" cy="64.68" r="12.85" fx="-73.55" fy="64.68" gradientTransform="matrix(-1.07 0 0 1.55 62.87 27.26)"/>
     //         <radialGradient id="snoo-radial-gragient-6" cx="107.93" cy="166.96" r="45.3" fx="107.93" fy="166.96" gradientTransform="matrix(1 0 0 .66 0 57.4)" gradientUnits="userSpaceOnUse">
-    //             <stop offset="0" stop-color="transparent"/>
-    //             <stop offset=".29" stop-color="transparent"/>
-    //             <stop offset=".73" stop-color="transparent"/>
+    //             <stop offset="0" stopColor="transparent"/>
+    //             <stop offset=".29" stopColor="transparent"/>
+    //             <stop offset=".73" stopColor="transparent"/>
     //             <stop offset="1"/>
     //         </radialGradient>
     //         <radialGradient xlinkHref="#snoo-radial-gragient" id="snoo-radial-gragient-7" cx="147.88" cy="32.94" r="39.77" fx="147.88" fy="32.94" gradientTransform="matrix(1 0 0 .98 0 .54)"/>
     //         <radialGradient id="snoo-radial-gragient-8" cx="131.31" cy="73.08" r="32.6" fx="131.31" fy="73.08" gradientUnits="userSpaceOnUse">
-    //             <stop offset=".48" stop-color="transparent"/>
-    //             <stop offset=".67" stop-color="transparent"/>
+    //             <stop offset=".48" stopColor="transparent"/>
+    //             <stop offset=".67" stopColor="transparent"/>
     //             <stop offset=".75"/>
-    //             <stop offset=".82" stop-color="transparent"/>
+    //             <stop offset=".82" stopColor="transparent"/>
     //         </radialGradient>
     //     </defs>
     //     <path fill="currentColor" stroke-width="0" d="M108 0C48.35 0 0 48.35 0 108c0 29.82 12.09 56.82 31.63 76.37l-20.57 20.57C6.98 209.02 9.87 216 15.64 216H108c59.65 0 108-48.35 108-108S167.65 0 108 0Z"/>
