@@ -22,7 +22,7 @@ const ProjectCard = ({ project }: { project: ProjectItemProps }) => {
 
     return (
         <div
-            className="mx-auto project-card-wrapper h-[180px] w-[180px] relative rounded-lg cursor-pointer bg-gradient-to-b from-[rgba(186,207,247,0)] to-[rgba(186,207,247,0.01)] bg-clip-content-box shadow-[inset_0_1px_1px_0_rgba(216,236,248,0.1),inset_0_24px_48px_0_rgba(168,216,245,0.04),0_16px_32px_rgba(0,0,0,0.4)] hover:shadow-lg transition-all duration-300 mx-2 p-4"
+            className="mx-auto project-card-wrapper h-[180px] w-[180px] relative rounded-lg cursor-pointer bg-gradient-to-b from-[rgba(186,207,247,0)] to-[rgba(186,207,247,0.01)] bg-clip-content-box shadow-[inset_0_1px_1px_0_rgba(216,236,248,0.1),inset_0_24px_48px_0_rgba(168,216,245,0.04),0_16px_32px_rgba(0,0,0,0.4)] hover:shadow-lg transition-all duration-300 p-4 mt-2"
             onClick={() => setIsExpanded(!isExpanded)}
         >
             <div className="h-full flex flex-col justify-between">
@@ -94,7 +94,7 @@ const ProjectCard = ({ project }: { project: ProjectItemProps }) => {
 
 export default function ProjectsSection() {
     return (
-        <div className="projects-container h-[236px] overflow-x-auto pb-4">
+        <div className="projects-container h-[236px] w-full overflow-x-auto pb-4">
             {/* <div className="flex gap-4 px-4 w-max mt-4"> */}
             <Swiper
                 modules={[Autoplay]}
@@ -118,7 +118,7 @@ export default function ProjectsSection() {
                 >
                 {
                     Projects.map((project, index) => (
-                        <SwiperSlide key={project.name}>
+                        <SwiperSlide key={project.name} className='min-w-[180px]'>
                             <ProjectCard key={index} project={project} />
                         </SwiperSlide>
                     ))

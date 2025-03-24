@@ -12,7 +12,7 @@ import ProjectsSection from '@/sections/Projects';
 
 export default function Home() {
   return (
-    <div className="container h-screen overflow-hidden relative z-10 mx-auto">
+    <div className="container h-screen overflow-hidden relative z-10">
       <Background />
       <div className="hero-section">
         <HeroSection />

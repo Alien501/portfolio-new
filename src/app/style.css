@@ -1,11 +1,14 @@
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 8px 8px;
-    grid-auto-flow: row;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr; */
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+    gap: 8px;
+    /* grid-auto-flow: row; */
     padding: 12px;
     width: 100%;
+    max-width: 100vw;
     box-sizing: border-box;
     grid-template-areas:
         "about-section techstack-section techstack-section techstack-section experience-section"
@@ -13,6 +16,7 @@
         "education-section hero-section hero-section hero-section experience-section"
         "education-section contact-section mid-split project-section project-section"
         "education-section contact-section mid-split project-section project-section";
+    justify-content: space-evenly;
 }
 
 .techstack-section {
@@ -63,6 +67,76 @@
 
 .social-section {
     grid-area: social-section;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        gap: 8px;
+        /* grid-auto-flow: row; */
+        padding: 12px;
+        width: 100%;
+        max-width: 100vw;
+        box-sizing: border-box;
+        grid-template-areas:
+            "about-section about-section education-section education-section experience-section experience-section"
+            "about-section about-section education-section education-section experience-section experience-section"
+            "mid-split mid-split hero-section hero-section experience-section experience-section"
+            "mid-split mid-split hero-section hero-section techstack-section techstack-section"
+            "contact-section contact-section contact-section project-section project-section project-section"
+            "contact-section contact-section contact-section project-section project-section project-section";
+    }
+
+    .hero-section {
+        grid-area: hero-section;
+    }
+
+    .mid-split {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "resume-section"
+            "social-section";
+        grid-area: mid-split;
+    }
+
+    .resume-section {
+        grid-area: resume-section;
+    }
+
+    .social-section {
+        grid-area: social-section;
+    }
+
+    .about-section {
+        grid-area: about-section;
+    }
+
+    .contact-section {
+        grid-area: contact-section;
+    }
+
+    .project-section {
+        grid-area: project-section;
+    }
+
+    .education-section {
+        grid-area: education-section;
+    }
+
+    .experience-section {
+        grid-area: experience-section;
+    }
+
+    .techstack-section {
+        grid-area: techstack-section;
+    }
+
 }
 
 @media (max-width: 700px) {

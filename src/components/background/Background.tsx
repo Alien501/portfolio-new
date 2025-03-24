@@ -132,6 +132,8 @@ export default function Background() {
     
     return (
         <div className="background fixed -z-10 h-screen left-0 top-0 right-0 bottom-0">
+            {/* <div className='absolute h-screen w-[32px] bg-primary-light/40 blur-2xl left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[18deg] origin-top'></div>
+            <div className='absolute h-screen w-[32px] bg-primary-light/40 blur-2xl left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-[18deg] origin-top'></div> */}
             <canvas ref={canvasRef}></canvas>
         </div>
     );

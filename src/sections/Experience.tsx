@@ -129,12 +129,12 @@ export default function Experience() {
 
     return (
         <div
-            className="relative h-[400px] overflow-y-scroll thin-scrollbar"
+            className="relative h-[400px] overflow-x-hidden overflow-y-scroll thin-scrollbar"
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
         >
             <span className="absolute z-0 w-64 h-64 rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-dark/10 blur-3xl"></span>
-            <div className="space-y-2 relative z-10 flex flex-col justify-evenly h-full p-4">
+            <div className="space-y-2 relative z-10 flex flex-col justify-evenly h-full p-2">
                 <AnimatePresence initial={false}>
                     {expList.map((experience) => (
                         <motion.div key={`${experience.organisation}-${experience.tenure}`} 

@@ -113,7 +113,7 @@ const SocialCard = ({ icon, link }: SocialItem) => {
 
 export default function Social() {
     return (
-        <div className="h-[100px] flex justify-evenly flex-wrap items-center">
+        <div className="lg:h-[100px] h-[80px] flex justify-evenly flex-wrap items-center">
             {
                 socialLinks.map((socialLink, index) => <SocialCard key={index} {...socialLink} />)
             }
