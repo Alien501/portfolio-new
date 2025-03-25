@@ -51,14 +51,29 @@ export default function Contact() {
 
         setIsSubmitting(true);
         try {
-            await new Promise(resolve => setTimeout(resolve, 1000));
+            const form = new FormData();
+            form.append('name', formData.name);
+            form.append('email', formData.email);
+            form.append('response', formData.query);
+
+            const res = await fetch(
+                'https://script.google.com/macros/s/AKfycbyXnvWBctTilJ4Hg_7fNfc8u9QpAliiU18CiHy0veP08VBwZmGU55zQQ3klMgOZcF0uAw/exec',
+                {
+                    method: 'POST',
+                    body: form
+                }
+            );
+
+            if (!res.ok) throw new Error('Submission failed');
+            
             setFormData({ name: '', email: '', query: '' });
             setErrors({});
-            setIsSubmitting(false);
+            alert('Your response has been submitted successfully!');
         } catch (error) {
             console.error(error);
+            alert('Something went wrong, couldn\'t submit your request!');
+        } finally {
             setIsSubmitting(false);
-            setErrors({ form: 'Submission failed. Please try again.' });
         }
     };
 
@@ -132,12 +147,11 @@ export default function Contact() {
                         relative overflow-hidden`}
                 >
                     {isSubmitting ? (
-                        <span className="text-primary-dark/60">Sending...</span>
+                        <span className="text-primary-dark/60">Submitting...</span>
                     ) : (
                         <span className="text-primary-dark/80 font-untitle-sans-medium">Submit</span>
                     )}
                 </button>
-                {errors.form && <div className="text-red-500/80 text-center text-sm">{errors.form}</div>}
             </form>
         </div>
     )
