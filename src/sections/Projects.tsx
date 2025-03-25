@@ -136,7 +136,7 @@ const Projects: ProjectItemProps[] = [
         stack: ["React.js", "React", "Tailwind CSS"],
         sourceCode: "https://github.com/Alien501/LRC-Get",
         isDeployed: true,
-        deploymentLink: "https://lrc-get-new.vercel.app/",
+        deploymentLink: "https://lrc-get.alien501.in/",
         description: "This website provides a convenient platform to retrieve both synchronized and non-synchronized lyrics for songs from diverse sources."
     },
     {
@@ -144,7 +144,7 @@ const Projects: ProjectItemProps[] = [
         stack: ["Next.js", "Tailwind CSS", 'CSS', "GSAP", "Framer Motion"],
         sourceCode: "https://github.com/Alien501/portfolio",
         isDeployed: true,
-        deploymentLink: "https://portfolio-git-main-alien501.vercel.app/",
+        deploymentLink: "https://www.alien501.in",
         description: "My personal portfolio website, The one currently you are in :-)."
     },
     {
@@ -158,7 +158,7 @@ const Projects: ProjectItemProps[] = [
     {
         name: "DEVS REC Website",
         stack: ["React", "CSS", "JavaScript"],
-        sourceCode: "",
+        sourceCode: "https://github.com/DevsREC/devsfest23",
         isDeployed: true,
         deploymentLink: "https://devsrec.club/",
         description: "A website I made for my college's techincal club, DEVS. This is currently serving as their current website."
@@ -176,7 +176,23 @@ const Projects: ProjectItemProps[] = [
         stack: ["Node.js", "Express.js", "React", "NextUI", "Tailwind CSS"],
         sourceCode: "https://github.com/Alien501/thirukural",
         isDeployed: true,
-        deploymentLink: "https://thirukural-uetr.vercel.app/",
+        deploymentLink: "https://thirukkural.alien501.in/",
         description: "The Thirukural API & Frontend project is a web application designed to make the Thirukural accessible to all. Using Node.js, Express.js, React, NextUI, and Tailwind CSS, it provides a comprehensive API and a user-friendly interface to explore this ancient Tamil literary work."
+    },
+    {
+        name: "LRC Generator",
+        stack: ['React', 'Tailwind CSS', "Typescript"],
+        sourceCode: 'https://github.com/Alien501/lrc-generator',
+        isDeployed: true,
+        deploymentLink: 'https://lrc-gen.alien501.in/',
+        description: 'LRC Generator is a user-friendly web application that allows users to paste lyrics, synchronize them with audio playback, and download the synchronized lyrics as an .lrc file. This project is built with React, featuring a modern UI styled using Tailwind CSS, state management powered by Zustand, and audio handling implemented with Howler.js.'
+    },
+    {
+        name: "Custom Home Tab",
+        stack: ['Extension', "JS", "HTML", "CSS"],
+        sourceCode: 'https://github.com/Alien501/custom-home-tab',
+        isDeployed: false,
+        deploymentLink: '',
+        description: 'the Custom New Tab Extension! This browser extension replaces the default new tab page with a personalized, minimalist dashboard featuring a sleek clock display.'
     }
 ];
