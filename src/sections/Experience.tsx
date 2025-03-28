@@ -1,7 +1,7 @@
 'use client'
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useMeasure } from "react-use";
 
 type ExperienceItem = {
@@ -111,39 +111,40 @@ const ExperienceCard = ({ organisation, role, tenure, description }: ExperienceI
 }
 
 export default function Experience() {
-    const [expList, setExpList] = useState<ExperienceItem[]>([...experienceList]);
-    const [isHovering, setIsHovering] = useState(false);
+    // const [expList, setExpList] = useState<ExperienceItem[]>([...experienceList]);
+    // const [isHovering, setIsHovering] = useState(false);
 
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            if (!isHovering) {
-                setExpList(prevList => {
-                    const firstItem = prevList[0];
-                    return [...prevList.slice(1), firstItem];
-                });
-            }
-        }, 3000);
+    // useEffect(() => {
+    //     const intervalId = setInterval(() => {
+    //         if (!isHovering) {
+    //             setExpList(prevList => {
+    //                 const firstItem = prevList[0];
+    //                 return [...prevList.slice(1), firstItem];
+    //             });
+    //         }
+    //     }, 3000);
 
-        return () => clearInterval(intervalId);
-    }, [isHovering]);
+    //     return () => clearInterval(intervalId);
+    // }, [isHovering]);
 
     return (
         <div
             className="relative h-[400px] overflow-x-hidden overflow-y-scroll thin-scrollbar"
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
+            // onMouseEnter={() => setIsHovering(true)}
+            // onMouseLeave={() => setIsHovering(false)}
         >
             <span className="absolute z-0 w-64 h-64 rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-dark/10 blur-3xl"></span>
             <div className="space-y-2 relative z-10 flex flex-col justify-evenly h-full p-2">
                 {/* <AnimatePresence initial={false}> */}
-                    {expList.map((experience) => (
+                    {experienceList.map((experience) => (
                         <motion.div key={`${experience.organisation}-${experience.tenure}`} 
                             layout
                             transition={{
                                 type: 'spring',
                                 stiffness: 300,
                                 damping: 30,
-                                duration: .3
+                                duration: .3,
+                                staggerChildren: 1
                             }}
                         >
                             <div

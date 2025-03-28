@@ -1,7 +1,7 @@
 'use client'
 
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 
 type EducationItem = {
     organisation: string,
@@ -53,32 +53,32 @@ const EducationCard = ({ organisation, role, tenure }: EducationItem) => {
 }
 
 export default function Education() {
-    const [expList, setExpList] = useState<EducationItem[]>([...experienceList]);
-    const [isHovering, setIsHovering] = useState(false);
+    // const [expList, setExpList] = useState<EducationItem[]>([...experienceList]);
+    // const [isHovering, setIsHovering] = useState(false);
 
-    useEffect(() => {
-        const intervalId = setInterval(() => {
-            if (!isHovering) {
-                setExpList(prevList => {
-                    const firstItem = prevList[0];
-                    return [...prevList.slice(1), firstItem];
-                });
-            }
-        }, 3000);
+    // useEffect(() => {
+    //     const intervalId = setInterval(() => {
+    //         if (!isHovering) {
+    //             setExpList(prevList => {
+    //                 const firstItem = prevList[0];
+    //                 return [...prevList.slice(1), firstItem];
+    //             });
+    //         }
+    //     }, 3000);
 
-        return () => clearInterval(intervalId);
-    }, [isHovering]);
+    //     return () => clearInterval(intervalId);
+    // }, [isHovering]);
 
     return (
         <div
             className="relative h-[300px] overflow-y-scroll thin-scrollbar"
-            onMouseEnter={() => setIsHovering(true)}
-            onMouseLeave={() => setIsHovering(false)}
+            // onMouseEnter={() => setIsHovering(true)}
+            // onMouseLeave={() => setIsHovering(false)}
         >
             <span className="absolute z-0 w-64 h-64 rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-dark/10 blur-3xl"></span>
             <div className="space-y-2 relative z-10 flex flex-col h-full p-4">
                 <AnimatePresence initial={false}>
-                    {expList.map((experience) => (
+                    {experienceList.map((experience) => (
                         <motion.div key={`${experience.organisation}-${experience.tenure}`} 
                             layout
                             transition={{
