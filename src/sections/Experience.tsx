@@ -13,6 +13,24 @@ type ExperienceItem = {
 
 const experienceList: ExperienceItem[] = [
     {
+        organisation: 'Firstsource',
+        tenure: '2025',
+        role: 'Software Intern',
+        description: 'Migrating legacy systems to Azure cloud. Building Jenkins CI/CD pipelines and automating deployment processes.'
+    },
+    {
+        organisation: 'Recharge 2025',
+        tenure: '2025',
+        role: 'Website Team Lead',
+        description: 'Led 8-member team developing college fest website serving 10k+ users. Built registration portal with Django/Next.js that handled 3x traffic surge without downtime.'
+    },
+    {
+        organisation: 'Chennai Metco',
+        tenure: '2024-2025',
+        role: 'Software Intern',
+        description: 'Developed desktop application for automotive welding measurement systems.'
+    },
+    {
         organisation: 'DEVS REC',
         tenure: '2023-2024',
         role: 'Board Member',
@@ -29,24 +47,6 @@ const experienceList: ExperienceItem[] = [
         tenure: '2024',
         role: 'Organiser',
         description: 'Coordinated 24-hour hackathon with 500+ participants. Developed and implemented judging criteria.'
-    },
-    {
-        organisation: 'Recharge 2025',
-        tenure: '2025',
-        role: 'Website Team Lead',
-        description: 'Led 8-member team developing college fest website serving 10k+ users. Built registration portal with Django/Next.js that handled 3x traffic surge without downtime.'
-    },
-    {
-        organisation: 'Chennai Metco',
-        tenure: '2024-2025',
-        role: 'Software Intern',
-        description: 'Developed desktop application for automotive welding measurement systems.'
-    },
-    {
-        organisation: 'Firstsource',
-        tenure: '2025',
-        role: 'Software Intern',
-        description: 'Migrating legacy systems to Azure cloud. Building Jenkins CI/CD pipelines and automating deployment processes.'
     },
 ];
 

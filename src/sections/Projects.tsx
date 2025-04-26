@@ -172,7 +172,7 @@ const Projects: ProjectItemProps[] = [
         description: "A PWA collabratively made under DEVS for ease access of various functionalities present and offered my college."
     },
     {
-        name: "Thirrukural",
+        name: "Thirrukural API",
         stack: ["Node.js", "Express.js", "React", "NextUI", "Tailwind CSS"],
         sourceCode: "https://github.com/Alien501/thirukural",
         isDeployed: true,
@@ -194,5 +194,13 @@ const Projects: ProjectItemProps[] = [
         isDeployed: false,
         deploymentLink: '',
         description: 'the Custom New Tab Extension! This browser extension replaces the default new tab page with a personalized, minimalist dashboard featuring a sleek clock display.'
+    },
+    {
+        name: "Hostel Booking App",
+        stack: ['Django', 'Python', 'React.js', 'Typescript'],
+        sourceCode: '',
+        isDeployed: true,
+        deploymentLink: 'https://hostel.rajalakshmi.org/',
+        description: 'Built a dynamic hostel booking system for my college with OTP-based confirmations and automated room management using cron jobs. Streamlined the entire booking process for students and admins!.'
     }
 ];
