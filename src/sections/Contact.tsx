@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import ShinyBorder from "@/components/shared/ShinyBorder";
 
 type ModalType = "success" | "error" | null;
 
@@ -214,11 +215,12 @@ export default function Contact() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className={`w-full h-[40px] cursor-pointer rounded-full bg-gradient-to-r from-primary-light/10 to-primary-dark/10 
-                        hover:from-primary-light/20 hover:to-primary-dark/20 transition-all
+          className={`w-full h-[40px] relative cursor-pointer rounded-md bg-gradient-to-r from-primary-light/10 to-primary-dark/10 
+                        hover:from-primary-light/20 hover:to-primary-dark/0 transition-all
                         ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}
                         relative overflow-hidden`}
         >
+          <ShinyBorder />
           {isSubmitting ? (
             <span className="text-primary-dark/60">Submitting...</span>
           ) : (

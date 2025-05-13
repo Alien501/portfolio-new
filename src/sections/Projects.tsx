@@ -22,7 +22,7 @@ const ProjectCard = ({ project }: { project: ProjectItemProps }) => {
 
     return (
         <div
-            className="mx-auto project-card-wrapper h-[180px] w-[180px] relative rounded-lg cursor-pointer bg-gradient-to-b from-[rgba(186,207,247,0)] to-[rgba(186,207,247,0.01)] bg-clip-content-box shadow-[inset_0_1px_1px_0_rgba(216,236,248,0.1),inset_0_24px_48px_0_rgba(168,216,245,0.04),0_16px_32px_rgba(0,0,0,0.4)] hover:shadow-lg transition-all duration-300 p-4 mt-2"
+            className="mx-auto relative project-card-wrapper h-[180px] w-[180px] relative rounded-lg cursor-pointer bg-gradient-to-b from-[rgba(186,207,247,0)] to-[rgba(186,207,247,0.01)] bg-clip-content-box shadow-[inset_0_1px_1px_0_rgba(216,236,248,0.1),inset_0_24px_48px_0_rgba(168,216,245,0.04),0_16px_32px_rgba(0,0,0,0.4)] hover:shadow-lg transition-all duration-300 p-4 mt-2"
             onClick={() => setIsExpanded(!isExpanded)}
         >
             <div className="h-full flex flex-col justify-between">
@@ -43,7 +43,7 @@ const ProjectCard = ({ project }: { project: ProjectItemProps }) => {
                             {project.sourceCode && (
                                 <Link
                                     href={project.sourceCode}
-                                    className="p-1.5 h-[28px] w-[28px] rounded-md bg-primary-dark/5 hover:bg-primary-dark/10 transition-colors flex items-center justify-center"
+                                    className="p-1.5 relative h-[28px] w-[28px] rounded-md bg-primary-dark/5 hover:bg-primary-dark/10 transition-colors flex items-center justify-center"
                                     onClick={(e) => e.stopPropagation()}
                                     target='_'
                                 >
@@ -64,7 +64,7 @@ const ProjectCard = ({ project }: { project: ProjectItemProps }) => {
                             {project.isDeployed && (
                                 <Link
                                     href={project.deploymentLink}
-                                    className="p-1.5 h-[28px] w-[28px] rounded-md bg-primary-dark/5 hover:bg-primary-dark/10 transition-colors flex items-center justify-center"
+                                    className="p-1.5 relative h-[28px] w-[28px] rounded-md bg-primary-dark/5 hover:bg-primary-dark/10 transition-colors flex items-center justify-center"
                                     onClick={(e) => e.stopPropagation()}
                                     target='_'
                                 >
