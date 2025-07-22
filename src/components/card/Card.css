@@ -9,7 +9,7 @@
 }
 
 .corner-dots {
-    --dot-color: #d1e4fa;
+    --dot-color: rgba(209, 228, 250, 0.7);
     --dot-size: 4px;
     content: "";
     position: absolute;

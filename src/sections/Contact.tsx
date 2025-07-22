@@ -215,7 +215,7 @@ export default function Contact() {
         <button
           type="submit"
           disabled={isSubmitting}
-          className={`w-full h-[40px] relative cursor-pointer rounded-md bg-gradient-to-r from-primary-light/10 to-primary-dark/10 
+          className={`w-full h-[40px] relative cursor-pointer rounded-md bg-primary-dark/10 outline outline-primary-light/0 relative rounded-md h-[32px] flex items-center justify-center cursor-pointer hover:shadow-[var(--shadow-inset)] transition-all duration-300
                         hover:from-primary-light/20 hover:to-primary-dark/0 transition-all
                         ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}
                         relative overflow-hidden`}

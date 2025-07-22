@@ -1,0 +1,18 @@
+.star-container, .star {
+    transition: all .3s;
+}
+
+.star-container:hover .star,
+.card:hover .star
+{
+    animation: slideUpAndRotate .6s ease;
+    transform-origin: center;
+}
+
+@keyframes slideUpAndRotate {
+    0% {
+        transform: translateY(12px) rotateZ(125deg);
+    } 100% {
+        transform: translateY(0) rotateZ(0deg);
+    }
+}

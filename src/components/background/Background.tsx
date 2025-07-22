@@ -207,10 +207,13 @@ export default function Background() {
 
     return (
         <div className="background fixed -z-10 h-screen left-0 top-0 right-0 bottom-0">
+            <div className='absolute h-[300px] z-10 left-0 right-0 bottom-0 flex justify-center items-center overflow-hidden'>
+                <span className='size-full overflow-hidden bg-[radial-gradient(ellipse_at_bottom,_#262626_0%,_#000_50%)]'></span>
+            </div>
             {/*<div className='spotlight spotlight-left absolute md:h-[400px] sm:h-[200px] top-0 lg:h-[700px] w-[200px] blur-2xl left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[18deg] origin-top'></div>
             <div className='spotlight spotlight-mid absolute md:h-[400px] sm:h-[200px] top-0 lg:h-[700px] w-[200px] blur-2xl left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rotate-[0deg] origin-top'></div>
             <div className='spotlight spotlight-right absolute md:h-[400px] sm:h-[200px] top-0 lg:h-[700px] w-[200px] blur-2xl left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-[18deg] origin-top'></div>*/}
-            <canvas ref={canvasRef}></canvas>
+            <canvas className='z-0' ref={canvasRef}></canvas>
         </div>
     );
 }

@@ -170,14 +170,14 @@ const TechStackList: TechStackItem[] = [
 
 const TechStackCard = ({ name, icon }: { name: string, icon: React.ReactNode }) => {
     return (
-        <div className="tech-card-wrapper hover:box-shadow bg-gradient-to-b from-[rgba(186,207,247,0)] to-[rgba(186,207,247,0.01)] bg-clip-content-box shadow-[inset_0_1px_1px_0_rgba(216,236,248,0.1),inset_0_24px_48px_0_rgba(168,216,245,0.04),0_16px_32px_rgba(0,0,0,0.4)] rounded-md m-4">
+        <div className="tech-card-wrapper hover:box-shadow bg-gradient-to-b from-[var(--border-from-color)] to-[var(--border-to-color)] bg-clip-content-box shadow-[var(--shadow-inset)] rounded-md m-4">
             <span className="highlight highlight-top"></span>
             <span className="highlight highlight-bottom"></span>
             <span className="techicon flex items-center align-center">
                 {icon}
             </span>
             <div className="techstack-name text-shadow font-untitle-sans-regular ">
-                <span className="font-untitle-sans-regular text-xs bg-gradient-to-b from-[rgba(186,207,247,0)] to-[rgba(186,207,247,0.01)] bg-clip-content-box shadow-[inset_0_1px_1px_0_rgba(216,236,248,0.1),inset_0_24px_48px_0_rgba(168,216,245,0.04),0_16px_32px_rgba(0,0,0,0.4)] p-1 rounded-md font-bold">
+                <span className="font-untitle-sans-regular text-xs bg-gradient-to-b from-[--border-from-color] to-[--border-to-color] bg-clip-content-box shadow-[var(--shadow-inset)] p-1 rounded-md font-bold">
                     {name}
                 </span>
             </div>

@@ -1,0 +1,15 @@
+.stack {
+    transition: all .6s;
+}
+
+.stack-container:hover .stack-1,
+.card:hover .stack-1
+{
+    transform: translateY(5px);
+}
+
+.stack-container:hover .stack-3,
+.card:hover .stack-3
+{
+    transform: translateY(-5px);
+}

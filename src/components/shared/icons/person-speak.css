@@ -1,0 +1,30 @@
+.lucide-speech:hover .wave-path,
+.card:hover .wave-path
+{
+  animation: waveFadeIn 0.6s ease-out forwards;
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.lucide-speech:hover .wave-path-2,
+.card:hover .wave-path-2
+{
+  animation-delay: 0.2s;
+}
+
+.lucide-speech:hover .wave-path-3,
+.card:hover .wave-path-3
+{
+  animation-delay: 0.4s;
+}
+
+@keyframes waveFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

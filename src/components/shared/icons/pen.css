@@ -1,0 +1,10 @@
+.pen-container, .pen {
+    transition: all .3s ease;
+    transform-origin: top;
+}
+
+.pen-container:hover .pen,
+.card:hover .pen
+{
+    transform: rotate(-95deg) translateX(-12px) translateY(-12px);
+}

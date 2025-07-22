@@ -1,0 +1,16 @@
+.education-container, .book {
+    transition: .3s ease;
+    transform-origin: center;
+}
+
+.education-container:hover .book-static,
+.card:hover .book-static
+{
+    transform: translateX(5px);
+}
+
+.education-container:hover .book-slant,
+.card:hover .book-slant
+{
+    transform: rotateZ(20deg) translateY(-2px) translateX(2px);
+}

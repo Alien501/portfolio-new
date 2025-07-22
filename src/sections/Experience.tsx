@@ -67,7 +67,7 @@ const ExperienceCard = ({ organisation, role, tenure, description }: ExperienceI
                 duration: 0.3
             }}
             onClick={() => setIsOpened(prev => !prev)}
-            className="select-none relative transition-all duration-300 cursor-pointer outline outline-primary-light/2 bg-gradient-to-b from-[rgba(186,207,247,0)] to-[rgba(186,207,247,0.0)] bg-clip-content-box shadow-[inset_0_1px_1px_0_rgba(216,236,248,0.1),inset_0_24px_48px_0_rgba(168,216,245,0.04),0_16px_32px_rgba(0,0,0,0.04)] hover:shadow-[inset_0_1px_1px_0_rgba(216,236,248,0.2),inset_0_24px_48px_0_rgba(168,216,245,0.08),0_16px_32px_rgba(0,0,0,0.0)] rounded-md p-2"
+            className="select-none relative transition-all duration-300 cursor-pointer outline outline-primary-light/2 bg-gradient-to-b from-[var(--border-from-color)] to-[var(--border-to-color)] bg-clip-content-box shadow-[var(--shadow-inset--hover)] hover:shadow-[var(--shadow-inset)] rounded-md p-2"
         >
             {
                 isOpened && (
@@ -140,7 +140,7 @@ export default function Experience() {
             // onMouseEnter={() => setIsHovering(true)}
             // onMouseLeave={() => setIsHovering(false)}
         >
-            <span className="absolute z-0 w-64 h-64 rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-dark/10 blur-3xl"></span>
+            {/* <span className="absolute z-0 w-64 h-64 rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-dark/10 blur-3xl"></span> */}
             <div className="space-y-2 relative z-10 flex flex-col justify-evenly h-full p-2">
                 {/* <AnimatePresence initial={false}> */}
                     {experienceList.map((experience) => (

@@ -1,0 +1,26 @@
+.person-icon-container:hover .person-parts,
+.card:hover .person-parts
+{
+  animation: slideUp 0.6s ease forwards;
+}
+
+.person-icon-container:hover .person-body,
+.card:hover .person-body
+{
+    animation-delay: 0s;
+}
+
+.person-icon-container:hover .person-head,
+.card:hover .person-head
+{
+    animation-delay: .2s;
+    transform: translateY(12px);
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(10px);
+    } 100% {
+        transform: translateY(0);
+    }
+}

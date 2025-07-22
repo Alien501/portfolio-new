@@ -1,0 +1,23 @@
+.rocket-fire, .rocket-parts {
+    transition: all .3s;
+}
+
+.rocket-container:hover .rocket-parts,
+.card:hover .rocket-parts
+{
+    /* transform: translate3d(14px, -14px, 10); */
+    animation: rocketAnimation .6s ease 0s;
+}
+
+.rocket-container:hover .rocket-fire,
+.card:hover .rocket-fire
+{
+    /* transform: translate3d(-14px, 14px, 10); */
+    animation: rocketAnimation .6s ease .1s;
+}
+
+@keyframes rocketAnimation {
+    0% {
+        transform: translate3d(-14px, 14px, 0);
+    }
+}
