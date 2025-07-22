@@ -12,7 +12,6 @@ import ProjectsSection from '@/sections/Projects';
 import About from '@/sections/About';
 import { PersonIcon } from '@/components/shared/icons/person';
 import { StackIcon } from '@/components/shared/icons/stack';
-import { ArmIcon } from '@/components/shared/icons/arms';
 import { StarIcon } from '@/components/shared/icons/star';
 import { EducationIcon } from '@/components/shared/icons/education';
 import { FireIcon } from '@/components/shared/icons/fire';
