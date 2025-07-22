@@ -20,7 +20,7 @@ export default function Card({title, child, icon=<PersonSpeakIcon />}: CardProps
             >
                 <div className="absolute inset-4 pointer-events-none corner-dots"></div>
                 <div className="relative z-10">
-                    <div className="card-title-wrapper flex justify-center space-x-2 items-center">
+                    <div className="card-title-wrapper flex justify-center -space-x-[0.5] -top-2 items-center">
                         <span>{icon}</span>
                         <p className="font-aeonik-bold text-xl text-gradient text-shadow text-center">{title}</p>
                     </div>
