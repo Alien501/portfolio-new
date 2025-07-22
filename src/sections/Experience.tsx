@@ -33,15 +33,15 @@ const experienceList: ExperienceItem[] = [
     },
     {
         organisation: 'DEVS REC',
-        tenure: '2023-2024',
-        role: 'Board Member',
-        description: 'Managed technical events end-to-end for college tech club. Organized workshops and contributed to club website development.'
-    },
-    {
-        organisation: 'DEVS REC',
         tenure: '2024-2025',
         role: 'Technical Lead',
         description: 'Led club website development with React.js. Implemented event management system and Git workflows. Mentored juniors through MERN stack weekend sessions.'
+    },
+    {
+        organisation: 'DEVS REC',
+        tenure: '2023-2024',
+        role: 'Board Member',
+        description: 'Managed technical events end-to-end for college tech club. Organized workshops and contributed to club website development.'
     },
     {
         organisation: 'Hackmaggeddon Ch-1',
