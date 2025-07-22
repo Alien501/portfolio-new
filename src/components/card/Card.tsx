@@ -24,7 +24,7 @@ export default function Card({title, child, icon=<PersonSpeakIcon />}: CardProps
                         <span>{icon}</span>
                         <p className="font-aeonik-bold text-xl text-gradient text-shadow text-center">{title}</p>
                     </div>
-                    <div className="h-full card-child-container font-untitle-sans-light text-xs tracking-wide leading-4 text-primary-dark/80 overflow-y-scroll thin-scrollbar">
+                    <div className="h-full card-child-container font-wotfard text-xs tracking-wide leading-4 text-primary-dark/80 overflow-y-scroll thin-scrollbar">
                         {child}
                     </div>
                 </div>

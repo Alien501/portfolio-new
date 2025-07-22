@@ -11,14 +11,14 @@ type EducationItem = {
 
 const experienceList: EducationItem[] = [
     {
-        organisation: 'Velammal Residential School, Ladanaendal',
-        tenure: '2022',
-        role: 'School'
-    },
-    {
         organisation: 'Rajalakshmi Engineering College, Chennai',
         tenure: '2026',
         role: 'B.E - CSE'
+    },
+    {
+        organisation: 'Velammal Residential School, Ladanaendal',
+        tenure: '2022',
+        role: 'School'
     },
 ];
 

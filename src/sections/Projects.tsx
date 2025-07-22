@@ -78,7 +78,7 @@ const ProjectCard = ({ project }: { project: ProjectItemProps }) => {
                     </>
                 ) : (
                     <div className="h-full flex items-center">
-                        <p className="text-xs text-primary-light/80 overflow-y-auto max-h-[140px]">
+                        <p className="text-xs font-wotfard text-primary-light/80 overflow-y-auto max-h-[140px]">
                             {project.description}
                         </p>
                     </div>

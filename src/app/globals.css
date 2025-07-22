@@ -25,6 +25,11 @@
   src: url('../../public/fonts/TestUntitledSans-Bold.otf');
 }
 
+@font-face {
+  font-family: 'Wotfard';
+  src: url('../../public/fonts/Wotfard.woff2');
+}
+
 :root {
   /* --background: #05060f; */
   --primary-light: #9ca3a8a5;
@@ -52,6 +57,8 @@
   --font-untitle-sans-light: 'Untitled Sans Light';
   --font-untitle-sans-medium: 'Untitled Sans Medium';
   --font-untitle-sans-bold: 'Untitled Sans Bold';
+  --font-wotfard: 'Wotfard', sans-serif;
+
 }
 
 @media (prefers-color-scheme: dark) {

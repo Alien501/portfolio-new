@@ -82,7 +82,7 @@ const ExperienceCard = ({ organisation, role, tenure, description }: ExperienceI
                     {isOpened && <ShinyBorder />}
                     {tenure}
                 </span>
-            </motion.div>
+        </motion.div>
             
             <motion.p layout="position" className="text-muted">
                 {role}
@@ -107,7 +107,7 @@ const ExperienceCard = ({ organisation, role, tenure, description }: ExperienceI
                 >
                     <div ref={contentRef}>
                         <hr className="opacity-[.4] mb-2" />
-                        <div className="text-xs text-primary-dark/60 leading-relaxed">
+                        <div className="text-xs text-primary-dark/60 leading-relaxed font-wotfard">
                             {description}
                         </div>
                     </div>
