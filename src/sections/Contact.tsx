@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ShinyBorder from "@/components/shared/ShinyBorder";
+// import ShinyBorder from "@/components/shared/ShinyBorder";
 
 type ModalType = "success" | "error" | null;
 
@@ -220,7 +220,7 @@ export default function Contact() {
                         ${isSubmitting ? "opacity-50 cursor-not-allowed" : ""}
                         relative overflow-hidden`}
         >
-          <ShinyBorder />
+          {/* <ShinyBorder /> */}
           {isSubmitting ? (
             <span className="text-primary-dark/60">Submitting...</span>
           ) : (

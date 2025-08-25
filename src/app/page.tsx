@@ -13,26 +13,27 @@ import About from '@/sections/About';
 import { PersonIcon } from '@/components/shared/icons/person';
 import { StackIcon } from '@/components/shared/icons/stack';
 import { StarIcon } from '@/components/shared/icons/star';
-import { EducationIcon } from '@/components/shared/icons/education';
+// import { EducationIcon } from '@/components/shared/icons/education';
 import { FireIcon } from '@/components/shared/icons/fire';
 import { RocketIcon } from '@/components/shared/icons/rocket';
 import { PenIcon } from '@/components/shared/icons/pen';
+import { CakeIcon } from '@/components/shared/icons/cake';
 
 export default function Home() {
   return (
     <div className="container h-screen overflow-hidden relative z-10 select-none">
       <Background />
-      <div className="hero-section">
+      <div className="hero-section border-dashed border border-1 border-primary-light/20">
         <HeroSection />
       </div>
-      <div className="techstack-section">
+      <div className="techstack-section h-full">
         <Card
           title='Tech Stack'
           child={<Techstack />}
           icon={<StackIcon />}
         />
       </div>
-      <div className="experience-section">
+      <div className="experience-section border-dashed border-l-1 border-l-primary-light/10">
         <Card
           title='Experience'
           child={<Experience />}
@@ -75,11 +76,11 @@ export default function Home() {
           icon={<PersonIcon />}
         />
       </div>
-      <div className="education-section">
+      <div className="education-section border-dashed border-l-1 border-l-primary-light/10">
         <Card
-          title='Education'
+          title='Hover Me'
           child={<Education />}
-          icon={<EducationIcon />}
+          icon={<CakeIcon />}
         />
       </div>
     </div>

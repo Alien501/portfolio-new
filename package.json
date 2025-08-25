@@ -16,6 +16,7 @@
     "next": "15.2.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-emojis": "^1.0.6",
     "react-fast-marquee": "^1.6.5",
     "react-use": "^17.6.0",
     "swiper": "^11.2.6",

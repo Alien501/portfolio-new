@@ -1,107 +1,165 @@
 'use client'
 
-import { AnimatePresence, motion } from "framer-motion";
+import { useState } from "react";
+// @ts-expect-error "un-supported package"
+import Emoji from 'react-emojis';
 // import { useEffect, useState } from "react";
 
-type EducationItem = {
-    organisation: string,
-    tenure: string,
-    role: string,
-}
-
-const experienceList: EducationItem[] = [
-    {
-        organisation: 'Rajalakshmi Engineering College, Chennai',
-        tenure: '2026',
-        role: 'B.E - CSE'
-    },
-    {
-        organisation: 'Velammal Residential School, Ladanaendal',
-        tenure: '2022',
-        role: 'School'
-    },
-];
-
-const EducationCard = ({ organisation, role, tenure }: EducationItem) => {
-    return (
-        <motion.div
-            layout
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ 
-                type: "spring", 
-                stiffness: 300,
-                damping: 30,
-                duration: 0.3
-            }}
-            className="select-none transition-all duration-300 outline outline-primary-light/2 bg-gradient-to-b from-[var(--border-from-color)] to-[var(--border-to-color)] bg-clip-content-box shadow-[var(--shadow-inset)] hover:shadow-[var(--shadow-inset-hover)] rounded-md p-2"
-        >
-            <motion.div layout="position" className="flex flex-row justify-between items-center">
-                <p className="font-untitle-sans-medium text-sm tracking-wide bg-gradient-to-t from-primary-light/80 to-primary-dark/80 bg-clip-text text-transparent">
-                    {organisation}
-                </p>
-                <span className="outline outline-primary-dark/20 pl-2 pr-2 pt-0 pb-0 rounded-full text-[.5rem] bg-primary-dark/10">
-                    {tenure}
-                </span>
-            </motion.div>
-            
-            <motion.p layout="position" className="text-muted">
-                {role}
-            </motion.p>
-        </motion.div>
-    );
-}
-
 export default function Education() {
-    // const [expList, setExpList] = useState<EducationItem[]>([...experienceList]);
-    // const [isHovering, setIsHovering] = useState(false);
+    const humanEmotionEmojis = [
+        "grinning-face",
+        "grinning-face-with-big-eyes",
+        "grinning-face-with-smiling-eyes",
+        "beaming-face-with-smiling-eyes",
+        "grinning-squinting-face",
+        "grinning-face-with-sweat",
+        "rolling-on-the-floor-laughing",
+        "face-with-tears-of-joy",
+        "slightly-smiling-face",
+        "upside-down-face",
+        "winking-face",
+        "smiling-face-with-smiling-eyes",
+        "smiling-face-with-halo",
+        "smiling-face-with-hearts",
+        "smiling-face-with-heart-eyes",
+        "star-struck",
+        "face-blowing-a-kiss",
+        "kissing-face",
+        "smiling-face",
+        "kissing-face-with-closed-eyes",
+        "kissing-face-with-smiling-eyes",
+        "face-savoring-food",
+        "face-with-tongue",
+        "winking-face-with-tongue",
+        "zany-face",
+        "squinting-face-with-tongue",
+        "money-mouth-face",
+        "hugging-face",
+        "face-with-hand-over-mouth",
+        "shushing-face",
+        "thinking-face",
+        "zipper-mouth-face",
+        "face-with-raised-eyebrow",
+        "neutral-face",
+        "expressionless-face",
+        "face-without-mouth",
+        "smirking-face",
+        "unamused-face",
+        "face-with-rolling-eyes",
+        "grimacing-face",
+        "lying-face",
+        "relieved-face",
+        "pensive-face",
+        "sleepy-face",
+        "drooling-face",
+        "sleeping-face",
+        "face-with-medical-mask",
+        "face-with-thermometer",
+        "face-with-head-bandage",
+        "nauseated-face",
+        "face-vomiting",
+        "sneezing-face",
+        "hot-face",
+        "cold-face",
+        "woozy-face",
+        "dizzy-face",
+        "exploding-head",
+        "cowboy-hat-face",
+        "partying-face",
+        "smiling-face-with-sunglasses",
+        "nerd-face",
+        "face-with-monocle",
+        "confused-face",
+        "worried-face",
+        "slightly-frowning-face",
+        "frowning-face",
+        "face-with-open-mouth",
+        "hushed-face",
+        "astonished-face",
+        "flushed-face",
+        "pleading-face",
+        "frowning-face-with-open-mouth",
+        "anguished-face",
+        "fearful-face",
+        "anxious-face-with-sweat",
+        "sad-but-relieved-face",
+        "crying-face",
+        "loudly-crying-face",
+        "face-screaming-in-fear",
+        "confounded-face",
+        "persevering-face",
+        "disappointed-face",
+        "downcast-face-with-sweat",
+        "weary-face",
+        "tired-face",
+        "face-with-steam-from-nose",
+        "pouting-face",
+        "angry-face",
+        "face-with-symbols-on-mouth",
+        "smiling-face-with-horns",
+        "angry-face-with-horns",
+        "grinning-cat",
+        "grinning-cat-with-smiling-eyes",
+        "cat-with-tears-of-joy",
+        "smiling-cat-with-heart-eyes",
+        "cat-with-wry-smile",
+        "kissing-cat",
+        "weary-cat",
+        "crying-cat",
+        "pouting-cat",
+        "see-no-evil-monkey",
+        "hear-no-evil-monkey",
+        "speak-no-evil-monkey",
+        "kiss-mark",
+        "love-letter",
+        "heart-with-arrow",
+        "heart-with-ribbon",
+        "sparkling-heart",
+        "growing-heart",
+        "beating-heart",
+        "revolving-hearts",
+        "two-hearts",
+        "heart-decoration",
+        "heart-exclamation",
+        "broken-heart",
+        "red-heart",
+        "orange-heart",
+        "yellow-heart",
+        "green-heart",
+        "blue-heart",
+        "purple-heart",
+        "black-heart",
+        "anger-symbol",
+        "dizzy",
+        "sweat-droplets",
+        "zzz",
+        "person-frowning",
+        "man-frowning",
+        "woman-frowning",
+        "person-pouting",
+        "man-pouting",
+        "woman-pouting",
+        "person-facepalming",
+        "man-facepalming",
+        "woman-facepalming",
+        "person-shrugging",
+        "man-shrugging",
+        "woman-shrugging"
+    ];
+    const [currentEmoji, setCurrentEmoji] = useState(humanEmotionEmojis[Math.floor(Math.random() * humanEmotionEmojis.length)]);
 
-    // useEffect(() => {
-    //     const intervalId = setInterval(() => {
-    //         if (!isHovering) {
-    //             setExpList(prevList => {
-    //                 const firstItem = prevList[0];
-    //                 return [...prevList.slice(1), firstItem];
-    //             });
-    //         }
-    //     }, 3000);
-
-    //     return () => clearInterval(intervalId);
-    // }, [isHovering]);
+    const pickRandomEmoji = () => setCurrentEmoji(humanEmotionEmojis[Math.floor(Math.random() * humanEmotionEmojis.length)])
 
     return (
         <div
             className="relative h-[300px] overflow-y-scroll thin-scrollbar"
-            // onMouseEnter={() => setIsHovering(true)}
-            // onMouseLeave={() => setIsHovering(false)}
+            onMouseEnter={() => pickRandomEmoji()}
+            onMouseLeave={() => pickRandomEmoji()}
         >
-            {/* <span className="absolute z-0 w-64 h-64 rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-dark/10 blur-3xl"></span> */}
-            <div className="space-y-2 relative z-10 flex flex-col h-full p-4">
-                <AnimatePresence initial={false}>
-                    {experienceList.map((experience) => (
-                        <motion.div key={`${experience.organisation}-${experience.tenure}`} 
-                            layout
-                            transition={{
-                                type: 'spring',
-                                stiffness: 300,
-                                damping: 30,
-                                duration: .3
-                            }}
-                        >
-                            <div
-                                key={`${experience.organisation}-${experience.tenure}`}
-                            >
-                                <EducationCard
-                                    organisation={experience.organisation}
-                                    role={experience.role}
-                                    tenure={experience.tenure}
-                                    key={`${experience.organisation}-${experience.tenure}` }
-                                />
-                            </div>
-                        </motion.div>
-                    ))}
-
-                </AnimatePresence>
+            <div className="space-y-2 relative z-10 h-full p-4 pt-10 flex justify-center item-center">
+                <span className="themed-emoji">
+                    <Emoji emoji={currentEmoji} size="120" />
+                </span>
             </div>
         </div>
     );

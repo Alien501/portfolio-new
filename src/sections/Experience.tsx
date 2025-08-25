@@ -38,16 +38,16 @@ const experienceList: ExperienceItem[] = [
         description: 'Led club website development with React.js. Implemented event management system and Git workflows. Mentored juniors through MERN stack weekend sessions.'
     },
     {
-        organisation: 'DEVS REC',
-        tenure: '2023-2024',
-        role: 'Board Member',
-        description: 'Managed technical events end-to-end for college tech club. Organized workshops and contributed to club website development.'
-    },
-    {
         organisation: 'Hackmaggeddon Ch-1',
         tenure: '2024',
         role: 'Organiser',
         description: 'Coordinated 24-hour hackathon with 500+ participants. Developed and implemented judging criteria.'
+    },
+    {
+        organisation: 'DEVS REC',
+        tenure: '2023-2024',
+        role: 'Board Member',
+        description: 'Managed technical events end-to-end for college tech club. Organized workshops and contributed to club website development.'
     },
 ];
 
@@ -118,27 +118,9 @@ const ExperienceCard = ({ organisation, role, tenure, description }: ExperienceI
 }
 
 export default function Experience() {
-    // const [expList, setExpList] = useState<ExperienceItem[]>([...experienceList]);
-    // const [isHovering, setIsHovering] = useState(false);
-
-    // useEffect(() => {
-    //     const intervalId = setInterval(() => {
-    //         if (!isHovering) {
-    //             setExpList(prevList => {
-    //                 const firstItem = prevList[0];
-    //                 return [...prevList.slice(1), firstItem];
-    //             });
-    //         }
-    //     }, 3000);
-
-    //     return () => clearInterval(intervalId);
-    // }, [isHovering]);
-
     return (
         <div
             className="relative h-[400px] overflow-x-hidden overflow-y-scroll thin-scrollbar"
-            // onMouseEnter={() => setIsHovering(true)}
-            // onMouseLeave={() => setIsHovering(false)}
         >
             {/* <span className="absolute z-0 w-64 h-64 rounded-full left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary-dark/10 blur-3xl"></span> */}
             <div className="space-y-2 relative z-10 flex flex-col justify-evenly h-full p-2">

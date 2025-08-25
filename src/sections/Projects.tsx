@@ -28,7 +28,7 @@ const ProjectCard = ({ project }: { project: ProjectItemProps }) => {
             <div className="h-full flex flex-col justify-between">
                 {!isExpanded ? (
                     <>
-                        <h3 className="text-sm font-bold mb-2 text-primary-dark/80 font-untitle-sans-medium">{project.name}</h3>
+                        <h3 className="font-untitle-sans-medium text-sm tracking-wide bg-gradient-to-t from-primary-light/80 to-primary-dark/80 bg-clip-text text-transparent">{project.name}</h3>
                         <div className="flex flex-wrap gap-2 mb-3">
                             {project.stack.map((tech, index) => (
                                 <span
@@ -78,7 +78,7 @@ const ProjectCard = ({ project }: { project: ProjectItemProps }) => {
                     </>
                 ) : (
                     <div className="h-full flex items-center">
-                        <p className="text-xs font-wotfard text-primary-light/80 overflow-y-auto max-h-[140px]">
+                        <p className="text-xs text-primary-dark/60 leading-relaxed font-wotfard overflow-y-auto max-h-[140px]">
                             {project.description}
                         </p>
                     </div>
@@ -140,6 +140,46 @@ const Projects: ProjectItemProps[] = [
         description: "This website provides a convenient platform to retrieve both synchronized and non-synchronized lyrics for songs from diverse sources."
     },
     {
+        name: "Hostel Booking App",
+        stack: ['Django', 'Python', 'React.js', 'Typescript'],
+        sourceCode: '',
+        isDeployed: true,
+        deploymentLink: 'https://hostel.rajalakshmi.org/',
+        description: 'Built a dynamic hostel booking system for my college with OTP-based confirmations and automated room management using cron jobs. Streamlined the entire booking process for students and admins!.'
+    },
+    {
+        name: "I5 Academy",
+        stack: ['PHP', 'HTML', 'CSS', 'MySQL', 'Razorpay'],
+        sourceCode: '',
+        isDeployed: true,
+        deploymentLink: 'https://i5academy.com/',
+        description: 'An educational blog-cum quiz site with payment integration and a neat admin.'
+    },
+    {
+        name: "Thirrukural API",
+        stack: ["Node.js", "Express.js", "React", "NextUI", "Tailwind CSS"],
+        sourceCode: "https://github.com/Alien501/thirukural",
+        isDeployed: true,
+        deploymentLink: "https://thirukkural.alien501.in/",
+        description: "The Thirukural API & Frontend project is a web application designed to make the Thirukural accessible to all. Using Node.js, Express.js, React, NextUI, and Tailwind CSS, it provides a comprehensive API and a user-friendly interface to explore this ancient Tamil literary work."
+    },
+    {
+        name: "LRC Generator",
+        stack: ['React', 'Tailwind CSS', "Typescript"],
+        sourceCode: 'https://github.com/Alien501/lrc-generator',
+        isDeployed: true,
+        deploymentLink: 'https://lrc-gen.alien501.in/',
+        description: 'LRC Generator is a user-friendly web application that allows users to paste lyrics, synchronize them with audio playback, and download the synchronized lyrics as an .lrc file. This project is built with React, featuring a modern UI styled using Tailwind CSS, state management powered by Zustand, and audio handling implemented with Howler.js.'
+    },
+    {
+        name: "Custom Home Tab",
+        stack: ['Extension', "JS", "HTML", "CSS"],
+        sourceCode: 'https://github.com/Alien501/custom-home-tab',
+        isDeployed: false,
+        deploymentLink: '',
+        description: 'the Custom New Tab Extension! This browser extension replaces the default new tab page with a personalized, minimalist dashboard featuring a sleek clock display.'
+    },
+    {
         name: "Portfolio",
         stack: ["Next.js", "Tailwind CSS", 'CSS', "GSAP", "Framer Motion"],
         sourceCode: "https://github.com/Alien501/portfolio",
@@ -171,36 +211,4 @@ const Projects: ProjectItemProps[] = [
         deploymentLink: "https://comp.devsrec.club/",
         description: "A PWA collabratively made under DEVS for ease access of various functionalities present and offered my college."
     },
-    {
-        name: "Thirrukural API",
-        stack: ["Node.js", "Express.js", "React", "NextUI", "Tailwind CSS"],
-        sourceCode: "https://github.com/Alien501/thirukural",
-        isDeployed: true,
-        deploymentLink: "https://thirukkural.alien501.in/",
-        description: "The Thirukural API & Frontend project is a web application designed to make the Thirukural accessible to all. Using Node.js, Express.js, React, NextUI, and Tailwind CSS, it provides a comprehensive API and a user-friendly interface to explore this ancient Tamil literary work."
-    },
-    {
-        name: "LRC Generator",
-        stack: ['React', 'Tailwind CSS', "Typescript"],
-        sourceCode: 'https://github.com/Alien501/lrc-generator',
-        isDeployed: true,
-        deploymentLink: 'https://lrc-gen.alien501.in/',
-        description: 'LRC Generator is a user-friendly web application that allows users to paste lyrics, synchronize them with audio playback, and download the synchronized lyrics as an .lrc file. This project is built with React, featuring a modern UI styled using Tailwind CSS, state management powered by Zustand, and audio handling implemented with Howler.js.'
-    },
-    {
-        name: "Custom Home Tab",
-        stack: ['Extension', "JS", "HTML", "CSS"],
-        sourceCode: 'https://github.com/Alien501/custom-home-tab',
-        isDeployed: false,
-        deploymentLink: '',
-        description: 'the Custom New Tab Extension! This browser extension replaces the default new tab page with a personalized, minimalist dashboard featuring a sleek clock display.'
-    },
-    {
-        name: "Hostel Booking App",
-        stack: ['Django', 'Python', 'React.js', 'Typescript'],
-        sourceCode: '',
-        isDeployed: true,
-        deploymentLink: 'https://hostel.rajalakshmi.org/',
-        description: 'Built a dynamic hostel booking system for my college with OTP-based confirmations and automated room management using cron jobs. Streamlined the entire booking process for students and admins!.'
-    }
 ];

@@ -187,7 +187,7 @@ const TechStackCard = ({ name, icon }: { name: string, icon: React.ReactNode }) 
 
 export default function Techstack() {
     return (
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center flex-1">
             <Marquee pauseOnHover direction="right">
                 {
                     TechStackList.map((techstack, index) => <TechStackCard key={index} name={techstack.name} icon={techstack.icon} />)

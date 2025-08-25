@@ -108,3 +108,11 @@ body {
   background-color: var(--primary-dark);
   border-radius: 2px;
 }
+
+.themed-emoji {
+  filter: sepia(30%) hue-rotate(225deg) saturate(20%) brightness(90%);
+}
+
+.themed-emoji:hover {
+  filter: sepia(30%) hue-rotate(360deg) saturate(100%) brightness(100%);
+}
