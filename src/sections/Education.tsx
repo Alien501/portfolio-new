@@ -150,17 +150,27 @@ export default function Education() {
     ];
     const [currentEmoji, setCurrentEmoji] = useState(humanEmotionEmojis[Math.floor(Math.random() * humanEmotionEmojis.length)]);
     const spanRef = useRef(null);
-    const popAudio = new Audio('/audio/ding.mp3');
+    const popAudioRef = useRef<HTMLAudioElement | null>(null);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+            popAudioRef.current = new Audio('/audio/ding.mp3');
+        }
+    }, []);
 
     useEffect(() => {
         if (spanRef.current) {
-            popAudio.play();
             gsap.fromTo(spanRef.current, 
                 { rotate: 0 },
                 { 
                     rotate: 360, 
                     duration: 0.6,
-                    ease: 'back.out(1.7)'
+                    ease: 'back.out(1.7)',
+                    onStart: () => {
+                        if (popAudioRef.current) {
+                            popAudioRef.current.play().catch((e: Error) => console.log('Audio play failed:', e));
+                        }
+                    }
                 }
             );
         }
