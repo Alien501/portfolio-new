@@ -110,7 +110,7 @@ body {
 }
 
 .themed-emoji {
-  filter: sepia(30%) hue-rotate(225deg) saturate(20%) brightness(90%);
+  filter: sepia(30%) hue-rotate(225deg) saturate(20%) brightness(90%) drop-shadow(0px 0px 10px var(--color-primary-light));
 }
 
 .themed-emoji:hover {

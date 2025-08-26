@@ -1,8 +1,10 @@
 'use client'
 
-import { useState } from "react";
+import gsap from "gsap";
+import { useEffect, useRef, useState } from "react";
 // @ts-expect-error "un-supported package"
 import Emoji from 'react-emojis';
+
 // import { useEffect, useState } from "react";
 
 export default function Education() {
@@ -147,17 +149,33 @@ export default function Education() {
         "woman-shrugging"
     ];
     const [currentEmoji, setCurrentEmoji] = useState(humanEmotionEmojis[Math.floor(Math.random() * humanEmotionEmojis.length)]);
+    const spanRef = useRef(null);
+    const popAudio = new Audio('/audio/ding.mp3');
+
+    useEffect(() => {
+        if (spanRef.current) {
+            popAudio.play();
+            gsap.fromTo(spanRef.current, 
+                { rotate: 0 },
+                { 
+                    rotate: 360, 
+                    duration: 0.6,
+                    ease: 'back.out(1.7)'
+                }
+            );
+        }
+    }, [currentEmoji]);
 
     const pickRandomEmoji = () => setCurrentEmoji(humanEmotionEmojis[Math.floor(Math.random() * humanEmotionEmojis.length)])
 
     return (
         <div
-            className="relative h-[300px] overflow-y-scroll thin-scrollbar"
-            onMouseEnter={() => pickRandomEmoji()}
-            onMouseLeave={() => pickRandomEmoji()}
+            className="relative h-[300px] overflow-hidden"
+            onMouseEnter={() => {pickRandomEmoji();}}
+            onMouseLeave={() => {pickRandomEmoji();}}
         >
             <div className="space-y-2 relative z-10 h-full p-4 pt-10 flex justify-center item-center">
-                <span className="themed-emoji">
+                <span ref={spanRef} className="themed-emoji inline-block">
                     <Emoji emoji={currentEmoji} size="120" />
                 </span>
             </div>
