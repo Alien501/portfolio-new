@@ -42,3 +42,34 @@
     border: 1px solid rgba(186, 207, 247, 0.12);
     pointer-events: none;
 }
+
+.card-heading-text::before {
+    content: 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+    position: absolute;
+    z-index: 0;
+    /* top: -2px; */
+    right: 0;
+    left: 0;
+    width: 100%;
+    color: transparent;
+    display: inline-block;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--foreground);
+    text-decoration-line: underline;
+    opacity: 0;
+    will-change: opacity;
+    /* filter: drop-shadow(0px 0px 0px var(--foreground)); */
+}
+
+.card-container:hover .card-heading-text::before {
+    animation: wavyAnimation 2s linear infinite;
+    opacity: 1;
+}
+
+@keyframes wavyAnimation {
+    0% {
+        transform: translate3d(-1px, 0, 0);
+    } 100% {
+        transform: translate3d(-40px, 0, 0);
+    }
+}

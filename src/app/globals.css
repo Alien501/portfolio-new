@@ -30,6 +30,11 @@
   src: url('../../public/fonts/Wotfard.woff2');
 }
 
+@font-face {
+  font-family: 'Doto';
+  src: url('../../public/fonts/doto.ttf');
+}
+
 :root {
   /* --background: #05060f; */
   --primary-light: #9ca3a8a5;
@@ -58,6 +63,7 @@
   --font-untitle-sans-medium: 'Untitled Sans Medium';
   --font-untitle-sans-bold: 'Untitled Sans Bold';
   --font-wotfard: 'Wotfard', sans-serif;
+  --font-doto: 'Doto', var(--font-wotfard);
 
 }
 
@@ -83,7 +89,7 @@ body {
 }
 
 .text-shadow {
-  text-shadow: 0px 2px 16px rgba(174, 207, 242, .24);;
+  text-shadow: 0px 0px 12px var(--color-primary-light);
 }
 
 .box-shadow {
