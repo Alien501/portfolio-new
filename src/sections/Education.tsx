@@ -146,8 +146,10 @@ export default function Education() {
         "woman-facepalming",
         "person-shrugging",
         "man-shrugging",
-        "woman-shrugging"
+        "woman-shrugging",
+        'alien'
     ];
+    
     const [currentEmoji, setCurrentEmoji] = useState(humanEmotionEmojis[Math.floor(Math.random() * humanEmotionEmojis.length)]);
     const spanRef = useRef(null);
     const popAudioRef = useRef<HTMLAudioElement | null>(null);

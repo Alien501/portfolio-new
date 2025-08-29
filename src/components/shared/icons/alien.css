@@ -1,0 +1,17 @@
+.outline-path {
+    stroke-dasharray: 2, 0; 
+    stroke-dashoffset: 0;
+    transition: fill 0.3s ease;
+    animation: flicker 1.2s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        stroke-dasharray: 2, 5;
+        stroke-width: 0;
+    }
+    100% {
+        stroke-dasharray: 20, 2;
+        stroke-width: 2;
+    }
+}

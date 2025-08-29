@@ -35,6 +35,11 @@
   src: url('../../public/fonts/doto.ttf');
 }
 
+@font-face {
+  font-family: 'Tamil';
+  src: url('../../public/fonts/ATM\ 005_BoldItalic.ttf');
+}
+
 :root {
   /* --background: #05060f; */
   --primary-light: #9ca3a8a5;
@@ -64,7 +69,7 @@
   --font-untitle-sans-bold: 'Untitled Sans Bold';
   --font-wotfard: 'Wotfard', sans-serif;
   --font-doto: 'Doto', var(--font-wotfard);
-
+  --font-tamil: 'Tamil';
 }
 
 @media (prefers-color-scheme: dark) {
@@ -89,7 +94,7 @@ body {
 }
 
 .text-shadow {
-  text-shadow: 0px 0px 12px var(--color-primary-light);
+  text-shadow: 0px 0px 4px var(--color-primary-light);
 }
 
 .box-shadow {
@@ -120,5 +125,36 @@ body {
 }
 
 .themed-emoji:hover {
-  filter: sepia(30%) hue-rotate(360deg) saturate(100%) brightness(100%);
+  filter: sepia(20%) hue-rotate(360deg) saturate(100%) brightness(100%);
+}
+
+/* Loader animations */
+.loading-spinner {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--primary-light);
+  border-top: 2px solid var(--primary-dark);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

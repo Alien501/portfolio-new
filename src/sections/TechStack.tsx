@@ -176,7 +176,7 @@ const TechStackCard = ({ name, icon }: { name: string, icon: React.ReactNode }) 
             <span className="techicon flex items-center align-center">
                 {icon}
             </span>
-            <div className="techstack-name text-shadow font-untitle-sans-regular ">
+            <div className="techstack-name font-untitle-sans-regular ">
                 <span className="font-wotfard text-xs bg-gradient-to-b from-[--border-from-color] to-[--border-to-color] bg-clip-content-box shadow-[var(--shadow-inset)] p-1 rounded-md font-bold">
                     {name}
                 </span>
