@@ -23,16 +23,6 @@
     transition: all 0.3s ease-in-out;
 }
 
-.project-card-wrapper .highlight-top {
-    top: 0;
-    transform: translateX(-50%);
-}
-
-.project-card-wrapper .highlight-bottom {
-    bottom: 0;
-    transform: translateX(-50%);
-}
-
 .project-card-wrapper:hover .highlight {
     opacity: 0.8;
     width: 85%;

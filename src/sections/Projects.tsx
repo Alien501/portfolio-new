@@ -22,7 +22,7 @@ const ProjectCard = ({ project }: { project: ProjectItemProps }) => {
 
     return (
         <div
-            className="mx-auto relative project-card-wrapper h-[180px] w-[180px] relative rounded-lg cursor-pointer bg-gradient-to-b from-[var(--border-from-color)] to-[var(--border-to-color)] bg-clip-content-box shadow-[var(--shadow-inset)] hover:shadow-lg transition-all duration-300 p-4 mt-2"
+            className="border border-primary-light/30 border-dashed project-card-wrapper h-[180px] w-[180px] relative rounded-none cursor-pointer bg-gradient-to-b from-[var(--border-from-color)] to-[var(--border-to-color)] bg-clip-content-box hover:shadow-[var(--shadow-inset)] transition-all duration-300 p-4 mt-1"
             onClick={() => setIsExpanded(!isExpanded)}
         >
             <div className="h-full flex flex-col justify-between">
@@ -84,10 +84,6 @@ const ProjectCard = ({ project }: { project: ProjectItemProps }) => {
                     </div>
                 )}
             </div>
-
-            {/* Card highlights */}
-            <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-light/30 to-transparent" />
-            <span className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary-dark/30 to-transparent" />
         </div>
     );
 };
@@ -98,11 +94,7 @@ export default function ProjectsSection() {
             {/* <div className="flex gap-4 px-4 w-max mt-4"> */}
             <Swiper
                 modules={[Autoplay]}
-                autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false,
-                }}
-                spaceBetween={20}
+                spaceBetween={0}
                 slidesPerView={1}
                 breakpoints={{
                     300: {
@@ -154,6 +146,14 @@ const Projects: ProjectItemProps[] = [
         isDeployed: true,
         deploymentLink: 'https://i5academy.com/',
         description: 'An educational blog-cum quiz site with payment integration and a neat admin.'
+    },
+    {
+        name: "Hangman",
+        stack: ['React.js', 'Tanstack Router', 'Tailwind', 'Express.js'],
+        sourceCode: 'https://github.com/Alien501/hangman',
+        isDeployed: true,
+        deploymentLink: 'https://hangman.alien501.in/',
+        description: 'Tamil Hangman is a web-based word guessing game that combines traditional hangman mechanics with Tamil language support. Players guess Tamil words by selecting consonants and vowels, with a unique scoring system and responsive design.'
     },
     {
         name: "Thirrukural API",
