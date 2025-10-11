@@ -198,3 +198,7 @@
         grid-area: auto !important;
     }
 }
+
+.clock-dots {
+    transition: all .4s ease-in-out;
+}
