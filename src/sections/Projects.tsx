@@ -22,7 +22,7 @@ const ProjectCard = ({ project }: { project: ProjectItemProps }) => {
 
     return (
         <div
-            className="border border-primary-light/30 border-dashed project-card-wrapper h-[180px] w-[180px] relative rounded-none cursor-pointer bg-gradient-to-b from-[var(--border-from-color)] to-[var(--border-to-color)] bg-clip-content-box hover:shadow-[var(--shadow-inset)] transition-all duration-300 p-4 mt-1"
+            className="mx-auto border border-primary-light/30 border-dashed project-card-wrapper h-[180px] w-[180px] relative rounded-none cursor-pointer bg-gradient-to-b from-[var(--border-from-color)] to-[var(--border-to-color)] bg-clip-content-box hover:shadow-[var(--shadow-inset)] transition-all duration-300 p-4 mt-1"
             onClick={() => setIsExpanded(!isExpanded)}
         >
             <div className="h-full flex flex-col justify-between">
@@ -84,17 +84,22 @@ const ProjectCard = ({ project }: { project: ProjectItemProps }) => {
                     </div>
                 )}
             </div>
+
+            {/* Card highlights */}
+            <span className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-primary-light/30 to-transparent" />
+            <span className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary-dark/30 to-transparent" />
         </div>
     );
 };
 
 export default function ProjectsSection() {
     return (
-        <div className="projects-container h-[236px] w-full overflow-x-auto pb-4">
-            {/* <div className="flex gap-4 px-4 w-max mt-4"> */}
+        <div className="projects-container h-[236px] w-full pb-4">
             <Swiper
-                modules={[Autoplay]}
-                spaceBetween={0}
+                spaceBetween={20}
+                centeredSlides
+                centeredSlidesBounds
+                centerInsufficientSlides
                 slidesPerView={1}
                 breakpoints={{
                     300: {
@@ -117,7 +122,6 @@ export default function ProjectsSection() {
                 }
 
                 </Swiper>
-            {/* </div> */ }
         </div >
     );
 }
