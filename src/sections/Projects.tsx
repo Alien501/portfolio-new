@@ -14,7 +14,6 @@ interface ProjectItemProps {
 }
 
 import 'swiper/css'
-import { Autoplay } from 'swiper/modules';
 
 
 const ProjectCard = ({ project }: { project: ProjectItemProps }) => {

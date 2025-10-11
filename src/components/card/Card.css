@@ -66,6 +66,18 @@
     opacity: 1;
 }
 
+.card-container {
+    animation: fadeIn .8s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}
+
 @keyframes wavyAnimation {
     0% {
         transform: translate3d(-1px, 0, 0);

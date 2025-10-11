@@ -38,7 +38,7 @@ const CharacterBlock = memo(({charMap = defaultCharMap}: CharacterBlockProps) =>
               className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-[6px] ${isActive === 1 ? 'text-gray-50' : 'text-gray-50/10'}`}
               animate={{
                 filter: isActive === 1 
-                  ? 'drop-shadow(0 0 8px rgba(255,255,255,.5)) drop-shadow(0 0 4px rgba(255,255,255,.5))' 
+                  ? 'drop-shadow(0 0 8px rgba(255,255,255,.3)) drop-shadow(0 0 4px rgba(255,255,255,.3))' 
                   : 'drop-shadow(0 0 0px rgba(255,255,255,0))',
               }}
               transition={{ 
