@@ -14,6 +14,12 @@ type ExperienceItem = {
 
 const experienceList: ExperienceItem[] = [
     {
+        organisation: 'Assetplus',
+        tenure: '2025',
+        role: 'SDE Intern',
+        description: 'Enhancing the Assetplus mutual funds platform by actively developing with a tech stack of React, Node.js, Express, and Flutter.'
+    },
+    {
         organisation: 'Firstsource',
         tenure: '2025',
         role: 'Software Intern',
