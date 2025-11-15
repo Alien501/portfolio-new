@@ -184,7 +184,7 @@ export default function Education() {
         <div
             className="relative h-[300px] overflow-hidden"
             onMouseEnter={() => {pickRandomEmoji();}}
-            onMouseLeave={() => {pickRandomEmoji();}}
+            // onMouseLeave={() => {pickRandomEmoji();}}
         >
             <div className="space-y-2 relative z-10 h-full p-4 pt-10 flex justify-center item-center">
                 <span ref={spanRef} className="themed-emoji inline-block">

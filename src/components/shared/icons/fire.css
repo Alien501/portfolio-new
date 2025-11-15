@@ -1,27 +1,21 @@
-.flame-path {
-    stroke-dasharray: 2, 0; /* Initial dash pattern */
-    stroke-dashoffset: 0;
-    /* fill: var(--color-primary-light); Fallback fill */
-    transition: fill 0.3s ease;
+.resume-section:hover .flame-path {
+    animation: flickerFlame .2s ease 0s infinite alternate,
+            moveFlame .4s ease 0s infinite alternate;
+    transform-origin: bottom center;
 }
 
-.flame-container:hover .flame-path,
-.card:hover .flame-path
-{
-    animation: flicker 1.2s ease-in-out forwards;
-}
-
-@keyframes flicker {
-    0%, 100% {
-        stroke-dasharray: 2, 5;
-        opacity: 1;
-        fill: transparent;
-        stroke: url(#triangleGradient);
-        /* fill: url(#triangleGradient); */
+@keyframes flickerFlame {
+    0% {
+        fill-opacity: .8;
+    } 100% {
+        fill-opacity: 1;
     }
-    100% {
-        stroke-dasharray: 20, 2;
-        stroke-width: 0;
-        fill: url(#triangleGradient);
+}
+
+@keyframes moveFlame {
+    0% {
+        transform: rotate(1deg);
+    } 100% {
+        transform: rotate(-1deg);
     }
 }

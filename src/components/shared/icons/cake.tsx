@@ -1,3 +1,5 @@
+import './cake.css';
+
 const CakeIcon = () => {
     return(
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
@@ -18,8 +20,8 @@ const CakeIcon = () => {
                     <animate fill="freeze" attributeName="strokeDashoffset" begin="0.5s" dur="0.2s" values="20;0" />
                 </path>
             </g>
-            <g fill="url(#triangleGradient)">
-                <path d="M13 5C13 5.5 12.5 6 12 6C11.5 6 11 5.5 11 5C11 4.5 12 4 12 4C12 4 13 4.5 13 5Z" opacity="0">
+            <g  fill="url(#triangleGradient)">
+                <path className="cake-fire" d="M13 5C13 5.5 12.5 6 12 6C11.5 6 11 5.5 11 5C11 4.5 12 4 12 4C12 4 13 4.5 13 5Z" opacity="0">
                     <animate fill="freeze" attributeName="d" begin="0.6s" dur="0.2s" values="M13 5C13 5.5 12.5 6 12 6C11.5 6 11 5.5 11 5C11 4.5 12 4 12 4C12 4 13 4.5 13 5Z;M14 4C14 5.10457 13.1046 6 12 6C10.8954 6 10 5.10457 10 4C10 2.89543 12 0 12 0C12 0 14 2.89543 14 4Z" />
                     <set fill="freeze" attributeName="opacity" begin="0.6s" to="1" />
                 </path>

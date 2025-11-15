@@ -1,0 +1,17 @@
+.cake-fire {
+    transition: .3s ease;
+}
+
+.education-section:hover .cake-fire {
+    /* transform: translateY(100px); */
+    animation: animateFlame .5s ease 0s infinite alternate-reverse;
+    transform-origin: bottom center;
+}
+
+@keyframes animateFlame {
+    0% {
+        transform: translateY(-.5px) rotate(1deg);
+    } 100% {
+        transform: translateY(1px) rotate(-1deg);
+    }
+}
